@@ -18,13 +18,13 @@ describe('Acesso a pagina Sabesp', () => {
       .find('#recaptcha-anchor')
       .should('be.visible')
       .click();
-      cy.get('#login-component_logar').click({force:true})
-      cy.xpath('//*[@id="fechaPop"]/span[1]/mat-icon').click({force:true})
-      cy.get('#selecao-endereco').click({force:true})
-      cy.get('h1').should('contain', 'Agência Virtual')
-      cy.get('#campo-selecao').click()
+      //cy.get('#login-component_logar').click({force:true})
+      //cy.xpath('//*[@id="fechaPop"]/span[1]/mat-icon').click({force:true})
+      //cy.get('#selecao-endereco').click({force:true})
+      //cy.get('h1').should('contain', 'Agência Virtual')
+      //cy.get('#campo-selecao').click()
   })
-  it.only('Consultar tela', () => {
+  it('Consultar tela', () => {
     cy.visit('https://sabesp-novaagv-hml.engdb.com.br/') , // { timeout: 50000}
     cy.xpath('//*[@id="fechaPop"]/span[1]/mat-icon').click()
     cy.get('.botao-aceitar').click()
@@ -35,7 +35,7 @@ describe('Acesso a pagina Sabesp', () => {
     cy.xpath('//*[@id="fechaPop"]/span[1]/mat-icon').click({force:true})
     cy.get('#selecao-endereco').click({force:true})
     cy.get('h1').should('contain', 'Agência Virtual')
-    //cy.get('#campo-selecao').click({force:true})
-    //cy.get('#campo-selecao-conteudo').should('contain', 'NENHUM ENDEREÇO ENCONTRADO')
+    cy.get('#campo-selecao').click({force:true})
+    cy.get('#campo-selecao-conteudo').should('contain', 'NENHUM ENDEREÇO ENCONTRADO')
   });
 })
