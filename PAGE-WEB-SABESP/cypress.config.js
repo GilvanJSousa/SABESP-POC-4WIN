@@ -2,10 +2,11 @@ const { defineConfig } = require("cypress");
 
 
 module.exports = defineConfig({
-  chromeWebSecurity: false,
+
   e2e: {
-    defaultCommandTimeout: 100000,
-    pageLoadTimeout: 30000,
+    chromeWebSecurity: false,
+    defaultCommandTimeout: 5000,
+    pageLoadTimeout: 5000,
     viewportWidth: 1024,
     viewportHeight: 768,
     //baseUrl: "https://site.sabesp.com.br/site/Default.aspx",
