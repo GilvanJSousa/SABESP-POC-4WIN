@@ -35,7 +35,7 @@ describe('Acesso a pagina Sabesp', () => {
     cy.xpath('//*[@id="fechaPop"]/span[1]/mat-icon').click({force:true})
     cy.get('#selecao-endereco').click({force:true})
     cy.get('h1').should('contain', 'Agência Virtual')
-    cy.get('#campo-selecao').click()
-    cy.get('#select-sem-fornec').should('contain', 'NENHUM ENDEREÇO ENCONTRADO')
+    cy.get('#campo-selecao').click({force:true})
+    cy.get('#campo-selecao-conteudo').should('contain', 'NENHUM ENDEREÇO ENCONTRADO')
   });
 })
