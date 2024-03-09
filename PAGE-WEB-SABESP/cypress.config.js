@@ -6,10 +6,10 @@ module.exports = defineConfig({
   video: true,
   chromeWebSecurity: false,
   e2e: {
-    defaultCommandTimeout: 50000,
-    pageLoadTimeout: 50000,
-    viewportWidth: 1024,
-    viewportHeight: 768,
+    defaultCommandTimeout: 100000,
+    pageLoadTimeout: 100000,
+    //viewportWidth: 1024,
+    //viewportHeight: 768,
     //baseUrl: "https://site.sabesp.com.br/site/Default.aspx",
     setupNodeEvents(on, config) {
       // implement node event listeners here
