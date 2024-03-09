@@ -25,11 +25,8 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 
-Cypress.Commands.add("clickRecaptcha", () => {
-    cy.window().then(win => {
-      win.document
-        .querySelector("iframe[src*='recaptcha']")
-        .contentDocument.getElementById("recaptcha-token")
-        .click();
-    });
-  });
+/** * Stub compatível com API para Google Recaptcha V3.
+ *
+ * Sempre passa recaptcha verificações localmente - se este foi usado em real
+ * configuração de vida, em seguida, a verificação do lado do servidor falharia. *
+ */
